@@ -7,6 +7,15 @@ export default {
             qty: 1
         };
     },
+    methods: {
+        openModal() {
+            this.qty = 1;
+            this.modal.show();
+        },
+        hideModal() {
+            this.modal.hide();
+        },
+    },
     mounted() {
         this.modal = new bootstrap.Modal(this.$refs.modal, {
             keyboard: false,

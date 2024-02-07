@@ -48,14 +48,14 @@ const app = Vue.createApp({
             this.showProduct = this.products.find(item => item.id === id);
             this.toggleSpinner(id, 'spinner');
             setTimeout(() => {
-                this.$refs.productModal.modal.show();
+                this.$refs.productModal.openModal();
             }, 500);
         },
         // 加入購物車
         addCart(id, qty = 1) {
             this.toggleSpinner(id, 'cartSpinner');
             setTimeout(() => {
-                this.$refs.productModal.modal.hide();
+                this.$refs.productModal.hideModal();
             }, 550);
             const cart = {
                 qty,
